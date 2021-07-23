@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './App.css';
 import Header from './components/Header'
 import FormularioTareas from './components/FormularioTareas'
+import ListaTareas from './components/ListaTareas'
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
     <div className="contenedor">
       <Header/>
       <FormularioTareas tareas={tareas} cambiarTareas={cambiarTareas}/>
+      <ListaTareas tareas={tareas}/>
     </div>
   );
 }
