@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare } from '@fortawesome/free-solid-svg-icons'
 
-const FormularioTareas = ({tareas, cambiarTareas}) => {
+const FormularioTareas = ({ tareas, cambiarTareas }) => {
 
     const [inputTarea, cambiarInputTarea] = useState('')
 
@@ -27,7 +27,7 @@ const FormularioTareas = ({tareas, cambiarTareas}) => {
     }
 
     return (
-        <form action="" className="formulario-tareas" onSubmit={handleSubmit}>
+        <form className="formulario-tareas" onSubmit={handleSubmit}>
             <input
                 type="text"
                 className="formulario-tareas__input"

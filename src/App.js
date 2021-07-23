@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './App.css';
 import Header from './components/Header'
 import FormularioTareas from './components/FormularioTareas'
@@ -21,13 +21,25 @@ const App = () => {
     ]
   )
 
-    console.log(tareas)
+  const [mostrarCompletadas, cambiarMostrarCompletadas] = useState(false)
+
+  console.log(tareas)
 
   return (
     <div className="contenedor">
-      <Header/>
-      <FormularioTareas tareas={tareas} cambiarTareas={cambiarTareas}/>
-      <ListaTareas tareas={tareas} cambiarTareas={cambiarTareas}/>
+      <Header
+        mostrarCompletadas={mostrarCompletadas}
+        cambiarMostrarCompletadas={cambiarMostrarCompletadas}
+      />
+      <FormularioTareas
+        tareas={tareas}
+        cambiarTareas={cambiarTareas}
+      />
+      <ListaTareas
+        tareas={tareas}
+        cambiarTareas={cambiarTareas}
+        mostrarCompletadas={mostrarCompletadas}
+      />
     </div>
   );
 }
